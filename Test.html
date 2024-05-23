@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f9e5e8; /* leicht rosa */
       margin: 0;
       padding: 0;
     }
@@ -34,10 +34,10 @@
 
     .block {
       background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-bottom: 30px;
     }
 
     .form-group {
@@ -46,31 +46,57 @@
 
     label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-weight: bold;
     }
 
     input[type="text"],
     textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
       resize: none;
     }
 
     input[type="submit"] {
-      background-color: #4CAF50;
+      background-color: #f57c00; /* hellgrün */
       color: white;
-      padding: 12px 20px;
+      padding: 14px 24px;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px;
       cursor: pointer;
       float: right;
     }
 
     input[type="submit"]:hover {
-      background-color: #45a049;
+      background-color: #e65100; /* dunkleres hellgrün */
+    }
+
+    .saved-items {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .saved-item {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .saved-item:last-child {
+      border-bottom: none;
+    }
+
+    .saved-item h3 {
+      margin-top: 0;
+    }
+
+    .saved-item p {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -87,7 +113,7 @@
         <form id="block-form">
           <div class="form-group">
             <label for="block-content">Inhalt:</label>
-            <textarea id="block-content" name="block-content" rows="4" placeholder="Schreibe hier deinen Text..."></textarea>
+            <textarea id="block-content" name="block-content" rows="6" placeholder="Schreibe hier deinen Text..."></textarea>
           </div>
           <input type="submit" value="Speichern">
         </form>
@@ -102,10 +128,22 @@
           </div>
           <div class="form-group">
             <label for="note-content">Inhalt:</label>
-            <textarea id="note-content" name="note-content" rows="4" placeholder="Schreibe hier deine Notizen..."></textarea>
+            <textarea id="note-content" name="note-content" rows="6" placeholder="Schreibe hier deine Notizen..."></textarea>
           </div>
           <input type="submit" value="Speichern">
         </form>
+      </div>
+
+      <div class="saved-items">
+        <h2>Gespeicherte Elemente</h2>
+        <div class="saved-item">
+          <h3>Mein erster Lernzettel</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula, lorem nec efficitur fringilla.</p>
+        </div>
+        <div class="saved-item">
+          <h3>Mein erster Block</h3>
+          <p>Ut condimentum nisl eu dolor posuere, in condimentum nulla aliquet. Vivamus finibus velit eu nisl fringilla malesuada.</p>
+        </div>
       </div>
     </div>
   </main>
