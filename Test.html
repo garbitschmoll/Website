@@ -1,16 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristische Lernplattform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
 
-<html>
+    header {
+      background-color: #3e3e3e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
 
-    <h1>
-        Test Head1
-    </h1>
+    h1 {
+      margin: 0;
+    }
 
-    <body>
+    main {
+      padding: 20px;
+    }
 
-        <h2>
-            Test Head2
-        </h2>
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
 
-    </body>
-    
+    .block {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Futuristische Lernplattform</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="block">
+        <h2>Dein eigener Block</h2>
+        <form id="block-form">
+          <div class="form-group">
+            <label for="block-content">Inhalt:</label>
+            <textarea id="block-content" name="block-content" rows="4" placeholder="Schreibe hier deinen Text..."></textarea>
+          </div>
+          <input type="submit" value="Speichern">
+        </form>
+      </div>
+
+      <div class="block">
+        <h2>Lernzettel erstellen</h2>
+        <form id="notes-form">
+          <div class="form-group">
+            <label for="note-title">Titel:</label>
+            <input type="text" id="note-title" name="note-title" placeholder="Gib einen Titel ein...">
+          </div>
+          <div class="form-group">
+            <label for="note-content">Inhalt:</label>
+            <textarea id="note-content" name="note-content" rows="4" placeholder="Schreibe hier deine Notizen..."></textarea>
+          </div>
+          <input type="submit" value="Speichern">
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
 </html>
